@@ -1,0 +1,15 @@
+# Asking user to enter a 4 digit number
+user = input("Enter a 4 digit number: ")
+
+# Prompt the user to type 4 digits and verify length
+if len(user) != 4:
+    print("Your number is not 4 digits; please type a 4 digit number")
+else:
+    # Convert the user input to a list of integers
+    tele = [int(digit) for digit in user]
+
+    # Check if it's a telemarketer
+    if (tele[0] == 8 or tele[0] == 9) and (tele[3] == 8 or tele[3] == 9) and tele[1] == tele[2]:
+        print("This is a telemarketer calling. Please exercise caution.")
+    else:
+        print("Kindly pick up the call.")  
